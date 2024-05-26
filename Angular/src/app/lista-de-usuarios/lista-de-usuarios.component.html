@@ -1,0 +1,19 @@
+<p-table [value]="users">
+  <ng-template pTemplate="header">
+    <tr>
+      <th style="width: 50%; color: #495057;">Nome</th>
+      <th style="width: 50%; color: #475057;">E-mail</th>
+      <th style="width: 5%;"></th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-usuario>
+    <tr>
+      <td style="width: 50%;">{{ usuario.nome }}</td>
+      <td style="width: 50%;">{{ usuario.email }}</td>
+      <td style="width: 5%;">
+        <p-button icon="pi pi-trash" [rounded]="true" [text]="true" severity="danger" size="small" (click)="deleteUser(usuario.id)"></p-button>
+      </td>
+    </tr>
+  </ng-template>
+</p-table>
+<p-toast></p-toast>

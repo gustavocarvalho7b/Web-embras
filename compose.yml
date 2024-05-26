@@ -1,0 +1,20 @@
+services:
+  rails:
+    build: ./Ruby
+    command: "./bin/rails server"
+    environment:
+      - RAILS_ENV=production
+      - RAILS_MASTER_KEY=fc72b6e9b8a2a5cdf542226a166d0ec2
+    volumes:
+      - app_storage:/rails/storage
+    ports:
+      - '3000:3000'
+  web:
+    build: ./Angular
+    depends_on:
+      - rails
+    ports:
+      - '8080:80'
+
+volumes:
+  app_storage: {}

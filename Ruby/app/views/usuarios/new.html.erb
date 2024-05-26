@@ -1,0 +1,9 @@
+<%= form_with model: @usuario, url: usuarios_path do |form| %>
+  <%= form.label :nome %>
+  <%= form.text_field :nome %>
+
+  <%= form.label :email %>
+  <%= form.text_field :email %>
+
+  <%= form.submit "Cadastrar" %>
+<% end %>
