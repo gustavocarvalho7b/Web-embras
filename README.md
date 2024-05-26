@@ -12,7 +12,7 @@ Este projeto é uma aplicação web desenvolvida para a Embras, com o objetivo d
 ## Dependências
 Para que o projeto funcione corretamente, é necessário ter os seguintes componentes instalados e configurados:
 - Docker
-- WSL (Windows Subsystem for Linux)
+- WSL
 - Hyper-V
 - Virtualização ativada na BIOS do computador
 
